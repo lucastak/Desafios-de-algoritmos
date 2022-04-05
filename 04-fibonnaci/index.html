@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <script>
-        /* 
+      /* 
             Faça um algoritmo que resolva a função de fibonnaci
             Fibonnaci: https://pt.wikipedia.org/wiki/Sequ%C3%AAncia_de_Fibonacci
         */
-        function fib(values) {
-            // implementar logica aqui
-            return 0
+      function calculateFibonnaci(number) {
+        let soma = 0;
+        let anterior = 0;
+        let proximo = 1;
+
+        for (let index = 0; index < number; index++) {
+          soma = anterior + proximo;
+          anterior = proximo;
+          proximo = soma;
         }
 
-        // Resultados esperados
-        console.log(fib(0), 0) // 0
-        console.log(fib(1), 1) // 1
-        console.log(fib(2), 1) // 1
-        console.log(fib(3), 2) // 2
-        console.log(fib(4), 3) // 3
-        console.log(fib(5), 5) // 5
-        console.log(fib(35), 9227465) // 9227465
-        console.log(fib(46), 1836311903) // 1836311903
+        return anterior;
+      }
 
+      // Resultados esperados
+      console.log(calculateFibonnaci(0)); // 0
+      console.log(calculateFibonnaci(1)); // 1
+      console.log(calculateFibonnaci(2)); // 1
+      console.log(calculateFibonnaci(3)); // 2
+      console.log(calculateFibonnaci(4)); // 3
+      console.log(calculateFibonnaci(5)); // 5
+      console.log(calculateFibonnaci(35)); // 9227465
+      console.log(calculateFibonnaci(46)); // 1836311903
     </script>
-</body>
-
+  </body>
 </html>
